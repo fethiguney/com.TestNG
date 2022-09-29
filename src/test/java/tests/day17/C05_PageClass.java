@@ -11,10 +11,14 @@ public class C05_PageClass {
     public void test01() {
 
         Driver.getDriver().get("https://amazon.com");
+        Driver.getDriver().navigate().refresh();
 
         AmazonPage amazon=new AmazonPage();
 
+        amazon.aramaKutusu.sendKeys("Nutella", Keys.ENTER);
+
         System.out.println(amazon.aramaSonucuElementi.getText());
+
 
     }
 }
