@@ -1,6 +1,7 @@
 package tests.day18;
 
-import org.junit.Assert;
+
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HotelMyCampPage;
 import utilities.ConfigReader;
@@ -32,5 +33,7 @@ public class C02_PositiveLoginTest {
         //Degerleri girildiginde sayfaya basarili sekilde
         // girilebildigini testet
         Assert.assertTrue(hotelMyCampPage.verifyLogin.isEnabled());
+
+
     }
 }
