@@ -2,6 +2,7 @@ package tests.day17;
 
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import pages.YouTubePage;
 import utilities.Driver;
 
 public class C07_SoftAssertYouTubeTest {
@@ -9,8 +10,9 @@ public class C07_SoftAssertYouTubeTest {
         //https://www.youtube.com adresinegidin
 
     SoftAssert softAssert=new SoftAssert();
+    YouTubePage youtube=new YouTubePage();
 
-    @Test
+    @Test (priority = 0)
     public void titleTest() {
         // Sayfa başlığının “YouTube” oldugunu testedin
 
@@ -19,20 +21,24 @@ public class C07_SoftAssertYouTubeTest {
 
     }
 
-    @Test
+    @Test (priority = 1)
     public void imageTest() {
         //YouTube resminin görüntülendiğini (isDisplayed()) testedin
+        softAssert.assertTrue(youtube.youTubeLogo.isDisplayed());
+
     }
 
-    @Test
+    @Test (priority = 2)
     public void searchBoxTest() {
         //Search Box 'in erisilebilir oldugunu test edin (isEnabled())
-
+        softAssert.assertTrue(youtube.searchbox.isEnabled());
     }
 
-    @Test
+    @Test (priority = 3)
     public void wrongTitleTest() {
         //wrongTitleTest => Sayfa basliginin “youtube” olmadigini dogrulayin
-
+        softAssert.assertTrue(Driver.getDriver().getTitle().equals("youtube"));
+        softAssert.assertAll();
     }
+
 }
