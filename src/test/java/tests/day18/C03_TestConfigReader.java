@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class C03_ConfigReader {
+public class C03_TestConfigReader {
 
 
     @Test

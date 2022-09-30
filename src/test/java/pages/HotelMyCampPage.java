@@ -27,6 +27,8 @@ public class HotelMyCampPage {
     @FindBy (xpath = "(//*[@class='dropdown-toggle'])[1]")
     public WebElement verifyLogin;
 
+    @FindBy (xpath = "//*[text()='Username or password is incorrect, please correct them and try again']")
+    public WebElement loginFailed;
 
 
 
