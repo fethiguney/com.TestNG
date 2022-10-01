@@ -30,6 +30,21 @@ public class HotelMyCampPage {
     @FindBy (xpath = "//*[text()='Username or password is incorrect, please correct them and try again']")
     public WebElement loginFailed;
 
+    @FindBy (xpath = "(//span[@class='title'])[3]")
+    public WebElement hotelManagement;
+
+    @FindBy (xpath = "(//i[@class='icon-calendar'])[4]")
+    public WebElement roomReservation;
+
+    @FindBy (xpath = "//*[text()='Add Room Reservation ']")
+    public WebElement addRoomReservation;
+
+    @FindBy (xpath = "//select[@id='IDUser']")
+    public WebElement idUserSelectMenu;
+
+    @FindBy (xpath = "(//button[@type='button'])[8]")
+    public WebElement roomReservationInsertedText;
+
 
 
 }

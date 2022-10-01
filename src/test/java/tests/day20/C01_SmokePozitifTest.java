@@ -1,5 +1,4 @@
-package tests.day18;
-
+package tests.day20;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -7,7 +6,7 @@ import pages.HotelMyCampPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class C02_PositiveLoginTest {
+public class C01_SmokePozitifTest {
 
     @Test
     public void test01() {
@@ -34,6 +33,7 @@ public class C02_PositiveLoginTest {
         // girilebildigini testet
         Assert.assertTrue(hotelMyCampPage.verifyLogin.isEnabled());
 
-        Driver.closeDriver();
+        Driver.getDriver().close();
+
     }
 }

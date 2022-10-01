@@ -16,5 +16,7 @@ public class C03_TestConfigReader {
         Driver.getDriver().get(amazonUrl);
 
         Driver.getDriver().get(facebookUrl);
+
+        Driver.closeDriver();
     }
 }

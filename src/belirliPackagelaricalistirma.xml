@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="istenen packagelari calistirma">
+    <test name="packages">
+        <packages>
+            <package name="tests.day18"/>
+        </packages>
+    </test>
+    <test name="baska test">
+        <classes>
+            <class name="tests.day20.C01_SmokePozitifTest"/>
+        </classes>
+    </test>
+</suite>

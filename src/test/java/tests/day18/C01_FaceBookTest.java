@@ -32,7 +32,7 @@ public class C01_FaceBookTest {
 
         Assert.assertTrue(faceBook.uyarıMesaji.isDisplayed());
 
-
+        Driver.closeDriver();
 
 
     }

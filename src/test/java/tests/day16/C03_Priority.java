@@ -9,6 +9,7 @@ public class C03_Priority extends TestBase_BeforeMethod_AfterMethod {
     public void amazonTest() {
         driver.get("https://amazon.com");
 
+
     }
 
     @Test (priority = 2)
