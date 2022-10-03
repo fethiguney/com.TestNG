@@ -24,6 +24,9 @@ public class Guru99 {
         @FindBy (xpath = "//*[text()='Log out']")
         public WebElement logOut;
 
+        @FindBy (xpath = "//tr[@class='heading3']")
+        public WebElement managerIdtext;
+
 
 
 
