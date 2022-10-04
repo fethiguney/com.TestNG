@@ -22,7 +22,10 @@ public class Driver {
 
         if (driver==null) {
             switch (ConfigReader.getProperty("browser")){
-
+                case "chrome" :
+                    WebDriverManager.chromedriver().setup();
+                    driver=new ChromeDriver();
+                    break;
                 case "edge"    :
                     WebDriverManager.edgedriver().setup();
                     driver=new EdgeDriver();
@@ -43,12 +46,12 @@ public class Driver {
                     WebDriverManager.chromedriver().setup();
                     driver=new ChromeDriver();
 
+                    driver.manage().window().maximize();
+                    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
+
             }
-
-
         }
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
         return driver;
     }

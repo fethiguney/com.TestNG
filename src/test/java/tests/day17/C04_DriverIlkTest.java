@@ -10,15 +10,18 @@ public class C04_DriverIlkTest {
     public void test01() {
 
         Driver.getDriver().get("https://amazon.com");
+        Driver.getDriver().navigate().refresh();
 
+
+
+    }
+
+    @Test
+    public void test02() {
         Driver.getDriver().get("https://youtube.com");
 
         Driver.closeDriver();
 
 
     }
-
-
-
-
 }

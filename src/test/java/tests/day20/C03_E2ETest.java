@@ -72,5 +72,7 @@ public class C03_E2ETest {
 
         //OK butonuna tıklayın.
         hotelMyCampPage.roomReservationInsertedText.click();
+
+        Driver.getDriver().close();
     }
 }

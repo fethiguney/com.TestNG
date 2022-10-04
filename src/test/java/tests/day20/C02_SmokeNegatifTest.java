@@ -27,6 +27,8 @@ public class C02_SmokeNegatifTest {
         //Degerleri girildiginde sayfaya girilemedigini test et
         hotelMyCampPage.loginFailed.isDisplayed();
 
+
+
     }
 
     @Test(priority = 2)
@@ -48,10 +50,12 @@ public class C02_SmokeNegatifTest {
         //Degerleri girildiginde sayfaya girilemedigini test et
         hotelMyCampPage.loginFailed.isDisplayed();
 
+
+
     }
 
 
-    @Test(priority = 3)
+    @Test
     public void InvalidPassWord() {
         //https://www.hotelmycamp.com/ adresine git
         Driver.getDriver().get(ConfigReader.getProperty("hotelMyCampUrl"));
@@ -69,6 +73,8 @@ public class C02_SmokeNegatifTest {
 
         //Degerleri girildiginde sayfaya girilemedigini test et
         hotelMyCampPage.loginFailed.isDisplayed();
+
+        Driver.getDriver().close();
 
     }
 }
