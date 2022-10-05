@@ -8,7 +8,7 @@ import utilities.Driver;
 
 public class C01_SmokePozitifTest {
 
-    @Test(groups = "grp1")
+    @Test
     public void test01() {
 
 

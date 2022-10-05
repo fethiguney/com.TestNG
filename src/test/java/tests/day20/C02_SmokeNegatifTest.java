@@ -7,7 +7,7 @@ import utilities.Driver;
 
 public class C02_SmokeNegatifTest {
 
-    @Test (priority = 1)
+    @Test (priority = 1, groups = "grp1")
     public void InvalidUserAndPassword() {
 
         //https://www.hotelmycamp.com/ adresine git
@@ -31,7 +31,7 @@ public class C02_SmokeNegatifTest {
 
     }
 
-    @Test(priority = 2)
+    @Test(priority =2, groups = "grp1")
     public void InvalidUser() {
         //https://www.hotelmycamp.com/ adresine git
         Driver.getDriver().get(ConfigReader.getProperty("hotelMyCampUrl"));
@@ -55,7 +55,7 @@ public class C02_SmokeNegatifTest {
     }
 
 
-    @Test
+    @Test (priority = 3, groups = "grp1")
     public void InvalidPassWord() {
         //https://www.hotelmycamp.com/ adresine git
         Driver.getDriver().get(ConfigReader.getProperty("hotelMyCampUrl"));
