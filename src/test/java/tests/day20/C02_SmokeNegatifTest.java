@@ -7,6 +7,8 @@ import utilities.Driver;
 
 public class C02_SmokeNegatifTest {
 
+    HotelMyCampPage hotelMyCampPage;
+
     @Test (priority = 1, groups = "grp1")
     public void InvalidUserAndPassword() {
 
@@ -14,7 +16,7 @@ public class C02_SmokeNegatifTest {
         Driver.getDriver().get(ConfigReader.getProperty("hotelMyCampUrl"));
 
         //login butonuna bas
-        HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
+        hotelMyCampPage=new HotelMyCampPage();
         hotelMyCampPage.homePagelogin.click();
 
         //test data username: manager1, test data password :manager1!
@@ -37,7 +39,7 @@ public class C02_SmokeNegatifTest {
         Driver.getDriver().get(ConfigReader.getProperty("hotelMyCampUrl"));
 
         //login butonuna bas
-        HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
+        hotelMyCampPage=new HotelMyCampPage();
         hotelMyCampPage.homePagelogin.click();
 
         //test data username: manager1, test data password :manager1!
@@ -61,7 +63,7 @@ public class C02_SmokeNegatifTest {
         Driver.getDriver().get(ConfigReader.getProperty("hotelMyCampUrl"));
 
         //login butonuna bas
-        HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
+        hotelMyCampPage=new HotelMyCampPage();
         hotelMyCampPage.homePagelogin.click();
 
         //test data username: manager1, test data password :manager1!
