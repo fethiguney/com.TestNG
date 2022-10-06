@@ -61,7 +61,6 @@ public class CrossDriver {
             driver.close();
             driver=null;
         }
-
     }
 
     public static void quitDrivers(){
