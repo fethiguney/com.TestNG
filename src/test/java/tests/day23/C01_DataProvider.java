@@ -15,10 +15,11 @@ public class C01_DataProvider {
 
     AmazonPage amazonPage;
 
-   @DataProvider
+    @DataProvider
     public static Object[][] aranacakKelimeler() {
-        return new Object[][]{{"java"}, {"selenium"}, {"samsung"}, {"iphone"}};
+        return new Object[][]{{"Selenium"}, {"java"}, {"samsung"} , {"iphone"}};
     }
+
 
     @Test (dataProvider = "aranacakKelimeler")
     public void test01(String kelimeler) {

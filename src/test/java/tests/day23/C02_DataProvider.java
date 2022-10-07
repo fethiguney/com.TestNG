@@ -16,11 +16,12 @@ public class C02_DataProvider {
 
     @DataProvider
     public static Object[][] kullanicilar() {
-        return new Object[][]{{"fethi@gmail.com", "1234"}, {"guney@gmail.com", "2345"}, {"user@gmail.com", "9876"}};
+        return new Object [][]{{"fethi@gmail.com", 1234}, {"guney@gmail.com", 2345}, {"user@gmail.com", 9876}};
     }
 
     @Test(dataProvider = "kullanicilar")
-    public void test01(String userEmail, String password) {
+    public void test01(String userEmail, Integer password) throws InterruptedException {
+
         blueRentalCarPage=new BlueRentalCarPage();
         //https://www.bluerentalcars.com/ adresine git
         Driver.getDriver().get(ConfigReader.getProperty("bluerentalUrl"));
@@ -30,12 +31,14 @@ public class C02_DataProvider {
 
         //Data provider ile 3 farklı userEmail ve 3 farklı password girelim
         blueRentalCarPage.emailBar.sendKeys(userEmail);
-        blueRentalCarPage.passwordBar.sendKeys(password);
+        String newPassword=password+"";
+        blueRentalCarPage.passwordBar.sendKeys(newPassword);
 
         //login butonuna tiklayin
         blueRentalCarPage.loginClick.click();
 
         //Degerleri girildiginde sayfaya basarili sekilde girilemedigini test et
         Assert.assertTrue(blueRentalCarPage.login.isDisplayed());
+
     }
 }
