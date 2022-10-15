@@ -4,9 +4,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
-public class Log4jTest1 {
-
-    private static Logger logger= LogManager.getLogger(Log4jTest1.class.getName());
+public class Log4jTest2 {
+    private static Logger logger= LogManager.getLogger(Log4jTest2.class.getName());
 
     @Test
     public void log4Test1() {
@@ -16,4 +15,6 @@ public class Log4jTest1 {
         logger.fatal("LOG FATAL");
         logger.warn("LOG WARN");
     }
+
+
 }
